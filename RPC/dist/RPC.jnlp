@@ -8,11 +8,23 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="RPC.jar" size="2414" download="eager" />
+    <jar href="RPC.jar" size="94156" download="eager" />
+    <jar href="lib/commons-codec-1.9.jar" size="263965" download="eager" />
+    <jar href="lib/commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib/httpclient-4.4.1.jar" size="720931" download="eager" />
+    <jar href="lib/httpcore-4.4.1.jar" size="322234" download="eager" />
+    <jar href="lib/junit-4.4.jar" size="161477" download="eager" />
+    <jar href="lib/libthrift-0.11.0.jar" size="238768" download="eager" />
+    <jar href="lib/log4j-1.2.17.jar" size="489884" download="eager" />
+    <jar href="lib/mockito-all-1.9.5.jar" size="1581066" download="eager" />
+    <jar href="lib/servlet-api-2.5.jar" size="105112" download="eager" />
+    <jar href="lib/slf4j-api-1.7.12.jar" size="32127" download="eager" />
+    <jar href="lib/slf4j-api-1.7.25.jar" size="41203" download="eager" />
+    <jar href="lib/slf4j-log4j12-1.7.12.jar" size="8860" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="RPC" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="rpc.ThriftClient"  name="RPC" />
+  <jfx:javafx-desc  width="800" height="600" main-class="webservice.ThriftClient"  name="RPC" />
   <update check="always"/>
 </jnlp>
