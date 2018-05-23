@@ -18,6 +18,11 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import org.apache.thrift.TException;
+import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TProtocol;
+import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.TTransport;
 
 /**
  *
@@ -91,7 +96,31 @@ public class ThriftClient extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+    try {
+      TTransport transport;
+      transport = new TSocket("localhost", 9090);
+      transport.open();
+      
+      TProtocol protocol = new  TBinaryProtocol(transport);
+      StudentService.Client client = new StudentService.Client(protocol);
+
+      perform(client);
+      transport.close();
+    } 
+    catch (TException x) {
+      x.printStackTrace();
+    } 
     }
     
+    private static void perform(StudentService.Client client) throws TException
+    {
+        Student student = null;
+        student.firstName = "Sanya";
+        student.secondName = "SecSanya";
+        student.numberCourse = 1;
+        student.numberGroup = 2;
+        client.add(student);
+        System.out.println("3*5=" + student.firstName);
+    }
+
 }

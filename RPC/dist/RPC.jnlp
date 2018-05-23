@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="RPC.jar" size="94156" download="eager" />
+    <jar href="RPC.jar" size="96494" download="eager" />
     <jar href="lib/commons-codec-1.9.jar" size="263965" download="eager" />
     <jar href="lib/commons-logging-1.2.jar" size="61829" download="eager" />
     <jar href="lib/httpclient-4.4.1.jar" size="720931" download="eager" />

@@ -15,7 +15,7 @@ public class StudentHandler implements StudentService.Iface{
 
     @Override
     public void add(Student student) throws TException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Student "+ student.firstName);
     }
 
     @Override
